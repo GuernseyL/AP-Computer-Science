@@ -3,6 +3,25 @@ import java.util.*;
 
 public class Prog88a {
     public static void main(String[] args) {
-        Scanner
+        Scanner input = new Scanner(System.in);
+
+        System.out.print("Please enter number 1: ");
+        double num1 = input.nextDouble();
+
+        System.out.print("Please enter number 2: ");
+        double num2 = input.nextInt();
+
+        double Sum = num1 + num2;
+        double Difference = num1 - num2;
+        double Product = num1 * num2;
+        double Average = (num1 + num2) / 2;
+        double Absolute = Math.abs(num1 - num2);
+        // If statment
+
+        System.out.println("Sum = " + Sum);
+        System.out.println("Difference  = " + Difference);
+        System.out.println("Product = " + Product);
+        System.out.println("Average = " + Average);
+        System.out.println("Absolute Differance = " + Absolute);
     }
 }
