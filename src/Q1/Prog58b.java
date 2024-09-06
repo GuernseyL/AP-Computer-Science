@@ -14,9 +14,9 @@ public class Prog58b {
         System.out.print("Please enter num C: ");
         double NumC = input.nextDouble();
 
-        double RootForm = (Math.sqrt(Math.pow(NumB, 2) - (-4 * (NumA * NumC))))/(2 * NumA);
-        double rootA = (-1 * NumB) + RootForm;
-        double rootB = (-1 * NumB) - RootForm;
+        double RootForm = (Math.sqrt(Math.pow(NumB, 2.0) - (-4.0 * (NumA * NumC))));
+        double rootA = (-1 * NumB)/(2.0 * NumA) + RootForm;
+        double rootB = (-1 * NumB)/(2.0 * NumA) - RootForm;
 
         System.out.println("Your roots are " + rootA + " and " + rootB);
     }
@@ -26,5 +26,5 @@ public class Prog58b {
 Please enter num A: 1
 Please enter num B: 5
 Please enter num C: 6
-Your roots are -1.5 and -8.5
+Your roots are -1.0 and -6.0
  */
