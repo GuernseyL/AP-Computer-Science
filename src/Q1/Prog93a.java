@@ -20,3 +20,8 @@ public class Prog93a {
         System.out.println("After May 20th pay this amount: " + LateFee);
     }
 }
+/*
+Please enter kilowatts used: 993
+Pay this amount: 53.299275
+After May 20th pay this amount: 54.89825325
+ */
