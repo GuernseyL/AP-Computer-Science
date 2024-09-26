@@ -2,43 +2,35 @@ package Q1;
 import java.util.*;
 
 public class LP41 {
-    public static void main(String[] args){
-        System.out.println("B \t\t I \t\t\t N \t\t\t G \t\t\t O");
-        int bingo = 0;
-        while (bingo <= 2){
-            int Bnum = (int) (Math.random() * (15-1)) + 1;
-            int Inum = (int) (Math.random() * (30-16)) + 16;
-            int Nnum = (int) (Math.random() * (45-31)) + 31;
-            int Gnum = (int) (Math.random() * (60-46)) + 46;
-            int Onum = (int) (Math.random() * (75-61)) + 61;
-            System.out.println(Bnum + " \t\t " + Inum + " \t\t " + Nnum + " \t\t " + Gnum + " \t\t " + Onum);
-            bingo ++;
+    public static void main(String[] args) {
+        Scanner input = new Scanner(System.in);
+        System.out.print("Enter the number of copies to print: ");
+        int copies = input.nextInt();
+        double price = 0;
+
+        if (copies >= 1000) {
+            price = 0.25;
         }
-        while (bingo == 3) {
-            int Bnum = (int) (Math.random() * (15 - 1)) + 1;
-            int Inum = (int) (Math.random() * (30 - 16)) + 16;
-            int Gnum = (int) (Math.random() * (60 - 46)) + 46;
-            int Onum = (int) (Math.random() * (75 - 61)) + 61;
-            System.out.println(Bnum + " \t\t " + Inum + " \t FreeSpace \t\t " + Gnum + " \t\t " + Onum);
-            bingo++;
+        else if (copies >= 750) {
+            price = 0.26;
         }
-        while (bingo <= 5) {
-            int Bnum = (int) (Math.random() * (15 - 1)) + 1;
-            int Inum = (int) (Math.random() * (30 - 16)) + 16;
-            int Nnum = (int) (Math.random() * (45 - 31)) + 31;
-            int Gnum = (int) (Math.random() * (60 - 46)) + 46;
-            int Onum = (int) (Math.random() * (75 - 61)) + 61;
-            System.out.println(Bnum + " \t\t " + Inum + " \t\t " + Nnum + " \t\t " + Gnum + " \t\t " + Onum);
-            bingo++;
+        else if (copies >= 500) {
+            price = 0.27;
         }
+        else if (copies >= 100) {
+            price = 0.28;
+        }
+        else {
+            price = 0.30;
+        }
+
+        double total = price * copies;
+        System.out.println("Price per copy is: $" + price);
+        System.out.print("Total cost is: $" + total);
     }
 }
 /*
-B 		 I 			 N 			 G 			 O
-4 		 18 		 41 		 58 		 70
-5 		 17 		 31 		 52 		 70
-10 		 25 		 43 		 55 		 63
-12 		 29 	 FreeSpace 		 56 		 64
-4 		 28 		 38 		 52 		 63
-9 		 28 		 33 		 48 		 61
+Enter the number of copies to print: 1001
+Price per copy is: $0.25
+Total cost is: $250.25
  */
