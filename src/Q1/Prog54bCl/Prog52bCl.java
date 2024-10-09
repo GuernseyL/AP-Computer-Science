@@ -1,4 +1,4 @@
-package Q1.Prog52bCl;
+package Q1.Prog54bCl;
 import java.util.Scanner;
 
 public class Prog52bCl {
@@ -14,7 +14,7 @@ public class Prog52bCl {
         System.out.print("Enter num4: ");
         int n4 = input.nextInt();
 
-        Cl52b wow = new Cl52b(n1, n2, n3 ,n4);
+        Cl54b wow = new Cl54b(n1, n2, n3 ,n4);
         wow.calc();
         int Sum = wow.getSum();
 
