@@ -27,7 +27,7 @@ public class Cl88a {
         mySum = myNum1 + myNum2;
         myDiff = myNum1 - myNum2;
         myProd = myNum1 * myNum2;
-        myAve = (double) myNum1 / myNum2;
+        myAve = (double) (myNum1 + myNum2)/2;
         myAbs = Math.abs(myDiff);
         if (myNum1 > myNum2) {
             myMax = myNum1;
@@ -43,5 +43,11 @@ public class Cl88a {
         }
     }
 
-    public int getFine() { return myFine; }
+    public int getSum() { return mySum; }
+    public int getDiff() { return myDiff; }
+    public int getProd() { return myProd; }
+    public double getAve() { return myAve; }
+    public int getAbs() { return myAbs; }
+    public int getMin() { return myMin; }
+    public int getMax() { return myMax; }
 }
