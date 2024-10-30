@@ -18,8 +18,6 @@ public class salesperson {
             else
                 myComm = 3500 * 0.095 + (getSales()-3500) * 0.12;
         }
-
-        // TODO
     }
 
     public salesperson(int id, int code, double sales) {
