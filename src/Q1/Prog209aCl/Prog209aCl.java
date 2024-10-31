@@ -12,6 +12,7 @@ public class Prog209aCl {
                 int Num = file.nextInt();
                 Cl209a numbers = new Cl209a(Num);
                 numbers.setComm();
+                numbers.toString();
 
 
             }
