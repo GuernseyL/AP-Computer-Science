@@ -24,9 +24,9 @@ public class CrPlayer extends CrEntity {
             Skill3 = "Thunderstorm";
             Skill4 = "Inferno";
             Skill5 = "Lightning Bolt";
-            Skill6 = "Ice Storm";
-            Skill7 = "Alpha";
-            Skill8 = "Beta";
+            //Skill6 = "Ice Storm";
+            //Skill7 = "Alpha";
+            //Skill8 = "Beta";
         }
     }
 }
