@@ -4,7 +4,7 @@ import java.util.*;
 public class GradeCalc {
     public static void main(String[] args) {
         Scanner input = new Scanner(System.in);
-        System.out.print("Enter your grade as a perecent: ");
+        System.out.print("Enter your grade as a percent: ");
         double gp = input.nextDouble();
 
         String grade = "";

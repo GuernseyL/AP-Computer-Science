@@ -8,9 +8,9 @@ public class CrPlayer extends CrEntity {
     private String Skill3;
     private String Skill4;
     private String Skill5;
-    private String skill6;
-    private String skill7;
-    private String skill8;
+    private String Skill6;
+    private String Skill7;
+    private String Skill8;
 
 
     public CrPlayer(String Class) {
@@ -20,13 +20,13 @@ public class CrPlayer extends CrEntity {
     public void Initialize(){
         if (myClass == ("Alchemist")) {
             Skill1 = "Firestorm";
-            Skill2 = "Blizzard";
+            Skill2 = "Hail";
             Skill3 = "Thunderstorm";
-            Skill4 = "Inferno";
+            Skill4 = "Meteor Shower";
             Skill5 = "Lightning Bolt";
-            //Skill6 = "Ice Storm";
-            //Skill7 = "Alpha";
-            //Skill8 = "Beta";
+            Skill6 = "Blizzard";
+            Skill7 = "Alpha";
+            Skill8 = "Beta";
         }
     }
 }
