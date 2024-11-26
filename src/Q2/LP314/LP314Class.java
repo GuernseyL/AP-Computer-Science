@@ -26,8 +26,8 @@ public class LP314Class {
         TOTAW = AWNY + AWNJ + AWCN;
         TOTMR = MRNY + MRNJ + MRCN;
         TOT = TOTAW + TOTMR;
-        PERAW = TOTAW / TOT;
-        PERMR = TOTMR / TOT;
+        PERAW = (double) TOTAW / TOT;
+        PERMR = (double) TOTMR / TOT;
     }
 
     public int getTOTAW() { return TOTAW; }
