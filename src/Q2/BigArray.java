@@ -31,7 +31,7 @@ public class BigArray {
             if (num > largest) largest = num;
         }
         System.out.println("Smallest number: " + smallest);
-        System.out.println("LArgest number: " + largest);
+        System.out.println("Largest number: " + largest);
 
         // 6. Switch the largest with smallest number. Print the list
         int smallIndex = -1;
