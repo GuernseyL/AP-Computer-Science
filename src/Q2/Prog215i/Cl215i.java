@@ -6,11 +6,11 @@ public class Cl215i {
     private double MyGallons;
     private double MyMPG;
 
-    public Cl215i(int Veh, double Mil, double Gal) {
+    public Cl215i(int Veh, double Mil, double Gal, double MPG) {
         MyVehicle = Veh;
         MyMiles = Mil;
         MyGallons = Gal;
-        MyMPG = 0.0;
+        MyMPG = MPG;
     }
 
     public double calc(){
