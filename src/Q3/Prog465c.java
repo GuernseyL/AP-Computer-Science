@@ -27,17 +27,27 @@ public class Prog465c {
 
             for (int r = 0; r < sort.length; r++) {
                 for (int c = 0; c < sort[0].length; c++) {
-                    if (r == 0 || r == sort.length)
+                    if (r == 0 || r == sort.length-1)
                         tot += sort[r][c];
                     else if (c == 0 || c == sort.length)
                             tot += sort[r][c];
                     }
                 }
 
-            System.out.println("The total of the edges is: " + tot);
+            System.out.println("\nThe total of the edges is: " + tot);
 
         } catch (IOException e) {
             System.out.println("Error: " + e);
         }
     }
 }
+
+/*
+Original table
+
+3 4 100 195
+182 225 83 125
+235 67 129 42
+
+The total of the edges is: 1082
+ */
