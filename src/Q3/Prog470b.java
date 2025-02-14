@@ -4,31 +4,38 @@ import java.io.File;
 import java.io.IOException;
 import java.util.Scanner;
 
-public class Prog470a {
+public class Prog470b {
     public static void main(String[] args) {
         try {
             Scanner file = new Scanner(new File("Langdat/prog464a.dat"));
-            int[][] sort = new int[6][5];
+            int[][] sort = new int[5][5];
 
-            for (int r = 0; r < sort.length-1; r++)
+            for (int r = 0; r < sort.length; r++)
                 for (int c = 0; c < sort[0].length; c++)
                     sort[r][c] = file.nextInt();
 
-            for (int c = 0; c < sort[0].length; c++) {
-                int total = 0;
-                for (int r = 0; r < sort.length-1; r++) {
-                    total += sort[r][c];
+            int DiagSum = 0;
+            int DiagSumAlt = 0;
 
+            for (int r = 0; r < sort.length; r++) {
+                for (int c = 0; c < sort[0].length; c++) {
+                    if (r == c)
+                        DiagSum += sort[r][c];
+                    if (r + c == 4)
+                        DiagSumAlt += sort[r][c];
                 }
-                sort[5][c] = total;
             }
 
+            System.out.println("Original Matrix \n");
             for (int r = 0; r < sort.length; r++) {
                 for (int c = 0; c < sort[0].length; c++) {
                     System.out.print(sort[r][c] + " ");
                 }
                 System.out.println();
             }
+
+            System.out.println("\nMain Diagonal Sum: " + DiagSum);
+            System.out.println("Other Diagonal Sum: " + DiagSumAlt);
 
         } catch (IOException e) {
             System.out.println("Error: " + e);
@@ -37,10 +44,14 @@ public class Prog470a {
 }
 
 /*
+Original Matrix
+
 45 67 89 12 -3
 -3 -6 -7 -4 -9
 96 81 -8 52 12
 14 -7 72 29 -1
 19 43 28 63 87
-171 178 174 152 86
+
+Main Diagonal Sum: 147
+Other Diagonal Sum: -3
  */
