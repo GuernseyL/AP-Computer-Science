@@ -42,11 +42,11 @@ public class Prog702q {
             }
             }
 
-            int TotalVehicle = 0; //done
-            double TotalWorth = 0; //done
-            double TotalWorthCar = 0; //done
-            String Long = ""; //done
-            String PeasantName = ""; //done
+            int TotalVehicle = 0; 
+            double TotalWorth = 0;
+            double TotalWorthCar = 0;
+            String Long = "";
+            String PeasantName = "";
             double Peasant = 999999999;
             int TotalTireCar = 0;
             int TotalTireTruck = 0;

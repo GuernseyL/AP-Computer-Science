@@ -45,6 +45,34 @@ public class Prog703s {
 
             }
 
+            int TotalColorofMoney = 0;
+            int BadVersion = 0;
+            int SecretCode = 0;
+
+            for (Computer C : list) {
+                if (C instanceof Windows) {
+                    if (((Windows) C).getVersion() == 7.0) {
+                        BadVersion++;
+                    }
+                }
+
+                if (C instanceof Apple) {
+                    if (((Apple) C).getColor().equals("Gold") || ((Apple) C).getColor().equals("Green")) {
+                        TotalColorofMoney++;
+                    }
+                }
+
+                if (C instanceof Linux) {
+                    if (((Linux) C).getCode()%5 == 0) {
+                        SecretCode++;
+                    }
+                }
+            }
+
+            System.out.println("Total number of Gold and Green Apple Computers: " + TotalColorofMoney);
+            System.out.println("Total number of 7.0 version Windows Computers: " + BadVersion);
+            System.out.println("Total number of Linux computers with hidden code ending in 5: " + SecretCode);
+
         } catch (IOException e) {
             System.out.println("Error: " + e);
         }
