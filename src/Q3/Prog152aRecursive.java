@@ -1,7 +1,5 @@
 package Q3;
 
-import java.util.Scanner;
-
 public class Prog152aRecursive {
     public static int SumSeries(int n) {
         if (n >= 9669) return 9669;         // Base/Ending Case
