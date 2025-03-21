@@ -9,4 +9,8 @@ public class CrEntity {
     private int RES;
     private int CRT;
 
+    public int damage(int dam) {
+        return HP-dam;
+    }
+
 }
