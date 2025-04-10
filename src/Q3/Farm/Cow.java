@@ -2,15 +2,14 @@ package Q3.Farm;
 
 public class Cow extends Animal{
     private static final double MILK_PRICE_LB = 0.20;
-    private int myMilk;
+    private double myMilk;
 
-    public Cow(String name, int weight, int milk, int corn, int hay) {
+    public Cow(String name, int weight, double milk, int corn, int hay) {
         super(name, weight, corn, hay);
         myMilk = milk;
     }
 
-    public double value(double cornCost, double hayCost)
-    {
+    public double value(double cornCost, double hayCost) {
         return myMilk * MILK_PRICE_LB - getFeedCost(cornCost, hayCost);
     }
         public double getMilk()     { return myMilk; }

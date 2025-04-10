@@ -52,6 +52,30 @@ public class Prog505w {
 
             // TODO: report income of the day, cumulative weight of all animals,
             // TODO: if there's enough food to feed all, cow that makes the most money
+            for (int MONEY = 0; MONEY < animals.size(); MONEY++) {
+
+            }
+            int totalweight = 0;
+            for (Animal w : animals) {
+                totalweight += w.getWeight();
+            }
+            System.out.printf("Culmative weight of all the animals is ", totalweight);
+
+            int maxCowIndex = 0;
+            double maxCowValue = Double.MIN_VALUE;
+            for (int lcv = 0; lcv < animals.size(); lcv++) {
+                if (animals.get(lcv) instanceof Cow) {
+                    Cow cow = (Cow) animals.get(lcv);
+                    double cowValue = cow.value(cornCost, hayCost);
+                    System.out.println(cowValue);
+                    if (cowValue > maxCowValue) {
+                        maxCowIndex = lcv;
+                        maxCowValue = cowValue;
+                    }
+                }
+            }
+            System.out.printf("Cow %s makes the most money\n",
+                            animals.get(maxCowIndex).getName());
 
             int minHorseIndex = 0;
             double minHorseValue = Double.MAX_VALUE;
