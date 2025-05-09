@@ -1,0 +1,8 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <excludeFromCompile>
+      <file url="file://$PROJECT_DIR$/src/Q2/Prog213fArray/Prog213fArray.java" />
+    </excludeFromCompile>
+  </component>
+</project>
