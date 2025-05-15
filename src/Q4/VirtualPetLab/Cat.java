@@ -20,17 +20,15 @@ public class Cat extends Pet {
         if (getEnergy() > 100) {
             setEnergy(100);
         }
-
-
     }
 
     @Override
     public void play() {
-        setHappiness(getHappiness()+30);
+        setHappiness(getHappiness()+60);
         if (getHappiness() > 100) {
             setHappiness(100);
         }
-        setHunger(getHunger()+10);
+        setHunger(getHunger()+25);
         if (getHunger() > 100) {
             setHunger(100);
         }
@@ -42,7 +40,7 @@ public class Cat extends Pet {
 
     @Override
     public void sleep() {
-        setEnergy(getEnergy()+75);
+        setEnergy(getEnergy()+50);
         if (getEnergy() > 100) {
             setEnergy(100);
         }

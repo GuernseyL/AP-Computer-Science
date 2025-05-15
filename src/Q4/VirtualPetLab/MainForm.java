@@ -19,7 +19,6 @@ public class MainForm extends JFrame {
     private JLabel statusLabel;
     private JLabel imageLabel;
     private JComboBox<String> petSelectorComboBox;
-    private JTextField nameField;
     // TODO: add adoption buttons
     // Pet list
     private PetManager petManager = new PetManager();
@@ -36,8 +35,10 @@ public class MainForm extends JFrame {
         this.pack();
 
         // Initialize starting pets
-        petManager.addPet(new Dog("Buddy"));
-        petManager.addPet(new Cat("Whiskers"));
+        Dog buddy = new Dog("Buddy");
+        petManager.addPet(buddy);
+        Cat whiskers = new Cat("Whiskers");
+        petManager.addPet(whiskers);
         updatePetList();
         petSelectorComboBox.setSelectedItem(null);  // Clear selection after populating
 
@@ -46,7 +47,8 @@ public class MainForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 returnPet().feed();
-                waitButtons(60);
+                updateStatusLabel(returnPet().getStatus());
+                waitButtons(10);
             }
         });
 
@@ -55,7 +57,8 @@ public class MainForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 returnPet().play();
-                waitButtons(30);
+                updateStatusLabel(returnPet().getStatus());
+                waitButtons(5);
             }
         });
 
@@ -64,7 +67,8 @@ public class MainForm extends JFrame {
             @Override
             public void actionPerformed(ActionEvent e) {
                 returnPet().sleep();
-                waitButtons(90);
+                updateStatusLabel(returnPet().getStatus());
+                waitButtons(15);
             }
         });
 
@@ -75,6 +79,7 @@ public class MainForm extends JFrame {
                 // Make sure the action event isn't triggered by the removeAllItems() call
                 if (petSelectorComboBox.getSelectedIndex() == -1) return;
                 updateStatusLabel(returnPet().getStatus());
+                setPetImage(returnPet().getImage());
                 // TODO: Implement pet selection change
                 // 1. Grab the current pet from the petManager using petSelectorComboBox.getSelectedIndex()
                 // 2. Update statusLabel with the selected pet's status
@@ -86,7 +91,19 @@ public class MainForm extends JFrame {
         foxButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String name = nameField.getText();
+                String name = JOptionPane.showInputDialog("Enter new pet name: ");
+
+                for (int checker = 0; checker < PetList.size(); checker++) {
+                    if (name.trim().equalsIgnoreCase(PetList.get(checker).getName().trim())) {
+                        name = JOptionPane.showInputDialog("Pet name already in use! Enter new pet name: ");
+                        checker = -1;
+                    }
+                    else if (name.trim().isEmpty()) {
+                        name = JOptionPane.showInputDialog("Do not leave pet name empty! Enter new pet name: ");
+                        checker = -1;
+                    }
+                }
+
                 Pet fox = new Fox(name);
                 PetList.add(fox);
                 updatePetList();
@@ -96,7 +113,19 @@ public class MainForm extends JFrame {
         catButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String name = nameField.getText();
+                String name = JOptionPane.showInputDialog("Enter new pet name: ");
+
+                for (int checker = 0; checker < PetList.size(); checker++) {
+                    if (name.trim().equalsIgnoreCase(PetList.get(checker).getName().trim())) {
+                        name = JOptionPane.showInputDialog("Pet name already in use! Enter new pet name: ");
+                        checker = -1;
+                    }
+                    else if (name.trim().isEmpty()) {
+                        name = JOptionPane.showInputDialog("Do not leave pet name empty! Enter new pet name: ");
+                        checker = -1;
+                    }
+                }
+
                 Pet cat = new Cat(name);
                 PetList.add(cat);
                 updatePetList();
@@ -106,7 +135,19 @@ public class MainForm extends JFrame {
         dogButton.addActionListener(new ActionListener() {
             @Override
             public void actionPerformed(ActionEvent e) {
-                String name = nameField.getText();
+                String name = JOptionPane.showInputDialog("Enter new pet name: ");
+
+                for (int checker = 0; checker < PetList.size(); checker++) {
+                    if (name.trim().equalsIgnoreCase(PetList.get(checker).getName().trim())) {
+                        name = JOptionPane.showInputDialog("Pet name already in use! Enter new pet name: ");
+                        checker = -1;
+                    }
+                    else if (name.trim().isEmpty()) {
+                        name = JOptionPane.showInputDialog("Do not leave pet name empty! Enter new pet name: ");
+                        checker = -1;
+                    }
+                }
+
                 Pet dog = new Dog(name);
                 PetList.add(dog);
                 updatePetList();
